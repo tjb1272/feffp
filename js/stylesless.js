@@ -38,57 +38,80 @@ let chevy = document.getElementById('4');
 let gmc = document.getElementById('5');
 
 function search() {
-  if(search.value === 'ford') {
+let searchInput = document.getElementById('searchInput');
+let ford = document.getElementById('ford');
+let honda = document.getElementById('honda');
+let nissan = document.getElementById('nissan');
+let chevy = document.getElementById('chevy');
+let gmc = document.getElementById('gmc');
+let dodge = document.getElementById('dodge');
+
+function search() {
+  if(searchInput.value === 'ford') {
     ford.style = 'display: default;'
     honda.style = 'display: none';
     nissan.style = 'display: none';
     chevy.style = 'display: none';
     gmc.style = 'display: none';
-  } else if (search.value === 'honda') {
+    dodge.style = 'display: none';
+  } else if (searchInput.value === 'honda') {
     honda.style = 'display: default;'
     ford.style = 'display: none';
     nissan.style = 'display: none';
     chevy.style = 'display: none';
     gmc.style = 'display: none';
-  } else if (search.value === 'nissan') {
+    dodge.style = 'display: none';
+  } else if (searchInput.value === 'nissan') {
     nissan.style = 'display: default;'
     honda.style = 'display: none';
     nissan.style = 'display: none';
     chevy.style = 'display: none';
     gmc.style = 'display: none';
-  } else if (search.value === 'chevy') {
+    dodge.style = 'display: none';
+  } else if (searchInput.value === 'chevy') {
     chevy.style = 'display: default;'
     honda.style = 'display: none';
     nissan.style = 'display: none';
     ford.style = 'display: none';
     gmc.style = 'display: none';
-  } else if (search.value === 'gmc') {
+    dodge.style = 'display: none';
+  } else if (searchInput.value === 'gmc') {
     gmc.style = 'display: default;'
     honda.style = 'display: none';
     nissan.style = 'display: none';
     chevy.style = 'display: none';
     ford.style = 'display: none';
+    dodge.style = 'display: none';
+  }  else if (searchInput.value === 'dodge') {
+    dodge.style = 'display: default;'
+    honda.style = 'display: none';
+    nissan.style = 'display: none';
+    chevy.style = 'display: none';
+    ford.style = 'display: none';
+    gmc.style = 'display: none';
+  // } else if (searchInput.value === '') {
+  //   alert = 'No Results Found';
   }
 }
 
 
-var notFoundElement = 'No Results Found'
+// var notFoundElement = 'No Results Found'
 
-$('#inventoryTable').tableFilter({
-// input field to filter table rows
-  'input' : 'input[type=search]',
-    // trigger events and elements
-  'trigger': {
-    "event"   : "keyup",
-    'element'   : 'td'
-},
-'caseSensitive' :  false,
-  'timeout' : -1,
-    'sort'  : false,
-    // not found element
-    // e.g. notFoundElement : ".not-found"
-'notFoundElement' : notFoundElement,
-    'callback'  : (function(){
-      alert ('No Results Found');
-    }),
-  })
+// $('#inventoryTable').tableFilter({
+// // input field to filter table rows
+//   'input' : 'input[type=search]',
+//     // trigger events and elements
+//   'trigger': {
+//     "event"   : "keyup",
+//     'element'   : 'td'
+// },
+// 'caseSensitive' :  false,
+//   'timeout' : -1,
+//     'sort'  : false,
+//     // not found element
+//     // e.g. notFoundElement : ".not-found"
+// 'notFoundElement' : notFoundElement,
+//     'callback'  : (function(){
+//       alert ('No Results Found');
+//     }),
+//   })
