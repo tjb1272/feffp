@@ -1,6 +1,6 @@
-  $('.navbar-collapse').on('click', function() {
-    $(".slider").toggleClass("sliderMove");  
-}); 
+//   $('.navbar-collapse').on('click', function() {
+//     $(".slider").toggleClass("sliderMove");  
+// }); 
 
 var data = {
   d: [
@@ -29,6 +29,11 @@ for (var i = 0; i < data.d.length; i++) {
 $('#sub_tot').change(function(){
   $('#tax').val( ($(this).val()*0.08 ).toFixed(2) );
 }).change()
+
+document.getElementById('searchInput').onsubmit=function() {
+window.location = 'inventory.html'+escape(document.getElementById('searchInput')
+)
+};
 
 let searchInput = document.getElementById('searchInput');
 let ford = document.getElementById('1');
